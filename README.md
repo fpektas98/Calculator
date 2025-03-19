@@ -1,66 +1,64 @@
-# 📱 Hesap Makinesi Uygulaması
+# 📱 Calculator Application
 
-Bu proje, **Vanilla JavaScript**, **Bootstrap** ve **CSS** kullanılarak yapılmış bir hesap makinesi uygulamasıdır. Hem temel hem de bilimsel hesaplamaları gerçekleştirebilen bu hesap makinesi, özellikle **mobil uyumluluk** göz önünde bulundurularak tasarlanmıştır.
+This project is a calculator application made using **Vanilla JavaScript**, **Bootstrap**, and **CSS**. It performs both basic and scientific calculations, and the design is especially focused on **mobile responsiveness**.
 
-## 🚀 Özellikler
+## 🚀 Features
 
-- **Temel Hesaplamalar**: Toplama, çıkarma, çarpma, bölme işlemleri.
-- **Bilimsel Hesaplamalar**: 
-  - **Üs Alma (xʸ)**: Bir sayının üssünü alma.
-  - **Tersini Alma (1/x)**: Bir sayının tersini alma.
-  - **Faktöriyel (x!)**: Bir sayının faktöriyelini hesaplama.
-  - **Mutlak Değer (|x|)**: Bir sayının mutlak değerini alma.
-  - **Sabitler**: Pi (π) ve Euler sayısı (e).
-- **Mobil Uyumlu Tasarım**: Küçük ekranlarda bile kolay kullanım için **Bootstrap** ile optimize edilmiştir.
-- **Klavye Desteği**: Klavye ile işlem yapabilirsiniz. Sayıları ve operatörleri hızlıca girebilirsiniz.
+- **Basic Calculations**: Addition, subtraction, multiplication, division operations.
+- **Scientific Calculations**:
+  - **Exponentiation (xʸ)**: Raising a number to a power.
+  - **Reciprocal (1/x)**: Finding the reciprocal of a number.
+  - **Factorial (x!)**: Calculating the factorial of a number.
+  - **Absolute Value (|x|)**: Finding the absolute value of a number.
+  - **Constants**: Pi (π) and Euler's number (e).
+- **Mobile-Friendly Design**: Optimized for easy use even on small screens using **Bootstrap**.
+- **Keyboard Support**: You can perform calculations using the keyboard by quickly entering numbers and operators.
 
-## ⚙️ Kullanılan Teknolojiler
+## ⚙️ Technologies Used
 
-Bu projede aşağıdaki teknolojiler kullanılmıştır:
+The following technologies were used in this project:
 
-- **HTML5**: Uygulamanın yapısını oluşturur.
-- **CSS3**: Uygulamanın stilini belirler.
-- **JavaScript**: Hesaplama işlemleri ve fonksiyonları sağlar. (Vanilla JavaScript kullanılmıştır, yani dış kütüphaneler kullanılmamıştır)
-- **Bootstrap**: Arayüzün responsive (mobil uyumlu) olmasını sağlayan, hızlı ve duyarlı tasarım framework'ü.
+- **HTML5**: Provides the structure of the application.
+- **CSS3**: Defines the styles of the application.
+- **JavaScript**: Handles the calculation operations and functions (Vanilla JavaScript, meaning no external libraries were used).
+- **Bootstrap**: A framework for responsive (mobile-friendly) design, making the UI fast and adaptable.
 
-## 📸 Ekran Görüntüsü
+## 📸 Screenshot
 
-İşte uygulamanın genel görünümü:
+Here is the general view of the application:
 
-![Ekran Görüntüsü]("calculator.png")
+<img src="calculator.png" width="300" />
 
-## 🛠️ Kurulum
+## 🛠️ Installation
 
-Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
+To run the project on your local machine, follow these steps:
 
-1. Depoyu bilgisayarınıza klonlayın:
+1. Clone the repository to your computer:
    ```bash
    git clone https://github.com/fpektas98/Calculator.git
-2. Proje klasörüne gidin:
+2. Navigate to the project folder:
    ```bash
    cd Calculator
-3. index.html dosyasını bir tarayıcıda açın ve uygulamanızı çalıştırın.
+3. Open the index.html file in a browser to run the application.
 
-🎯 **Kullanım**
-- **Hesaplama Yapmak:**
-   - Temel hesaplama işlemleri (toplama, çıkarma, çarpma, bölme) için sayıları ve işlemi seçin ve sonucu görün.
-- **Bilimsel Fonksiyonlar:**
-  - Bilimsel hesaplamalar için, uygulamanın sağ üst kısmındaki bilimsel mod butonuna tıklayarak ekstra fonksiyonlara ulaşabilirsiniz.
-  - Üs alma (xʸ), tersini alma (1/x), faktöriyel (x!) ve mutlak değer (|x|) fonksiyonlarını kullanabilirsiniz.
-- **Mobilde Kullanım:**
-  - Bootstrap sayesinde uygulama her ekran boyutuna uyum sağlar, böylece küçük ekranlarda bile rahatça kullanılabilir.
-- **Klavye Desteği:**
-  - Klavyenizle de işlem yapabilirsiniz. Sayıları ve operatörleri kolayca girerek hızlı hesaplama yapabilirsiniz.
-📦 **Paketler**
-Proje dış bir kütüphane veya paket kullanmamaktadır, sadece Bootstrap'i responsive tasarım için kullanmıştır.
+🎯 **Usage**
+- **Performing Calculations:**
+   - For basic calculations (addition, subtraction, multiplication, division), select numbers and the operation, and view the result.
+- **Scientific Functions:**
+  - To access scientific functions, click the scientific mode button at the top right of the app to reveal additional functions.
+  - Use exponentiation (xʸ), reciprocal (1/x), factorial (x!), and absolute value (|x|) functions.
+- **Mobile Use:**
+  - Thanks to Bootstrap, the application is responsive and adapts to all screen sizes, making it easy to use on smaller screens.
+- **Keyboard Support:**
+  - You can perform calculations using your keyboard by quickly entering numbers and operators. 
+📦 **Packages**
+This project does not use any external libraries or packages, only Bootstrap for responsive design.
 
-📚 Katkı
-Projeye katkı sağlamak isterseniz, aşağıdaki adımları takip edebilirsiniz:
+📚 Contribution If you'd like to contribute to this project, follow these steps:
+-Fork this repository.
+-Create a new branch.
+-Make your desired changes.
+-Commit your changes and create a pull request.
 
-- Bu depoyu fork'layın.
-- Yeni bir branch oluşturun.
-- Yapmak istediğiniz değişiklikleri gerçekleştirin.
-- Değişikliklerinizi commit edin ve pull request oluşturun.
-💬 İletişim
-Eğer bu proje hakkında herhangi bir sorunuz varsa veya önerilerde bulunmak isterseniz, benimle iletişime geçebilirsiniz.
+💬 Contact If you have any questions about this project or would like to provide suggestions, feel free to contact me.
    
