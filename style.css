@@ -2,16 +2,12 @@
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #212529, #343a40);
-    /* Daha zarif ve nötr bir gradient */
     min-height: 100vh;
-    /* Tüm ekranı kaplamasını sağlar */
     margin: 0;
-    /* Varsayılan boşlukları kaldırır */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 10px;
-    /* Mobilde daha rahat yerleşim için padding */
 }
 
 /* Hesap makinesi kartı */
@@ -20,12 +16,10 @@ body {
     max-width: 600px;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-    /* Daha derin bir gölge */
     overflow: hidden;
     display: flex;
     flex-direction: row;
     background-color: #2d3436;
-    /* Kart arka planı koyu ve sade */
 }
 
 /* İçerik düzeni */
@@ -36,7 +30,6 @@ body {
     gap: 5px;
     width: 100%;
     padding: 10px;
-    /* Hafif iç boşluk */
 }
 
 /* Buton kategorileri */
@@ -50,16 +43,13 @@ body {
     border-radius: 12px;
     transition: background-color 0.2s ease, transform 0.1s ease, filter 0.2s ease;
     color: #ffffff;
-    /* Varsayılan yazı rengi beyaz */
 }
 
 /* Hover efekti: Yazı rengi korunuyor */
 .btn:hover {
     transform: scale(1.03);
     filter: brightness(1.15);
-    /* Hafif parlaklık, arka plan değişmeden */
     color: #ffffff;
-    /* Hover'da yazı rengi değişmez */
 }
 
 .btn-outline-secondary {
@@ -78,43 +68,60 @@ body {
     background-color: #466248;
 }
 
+/* 5 sütunlu düzeni sağla */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 0 0 20%; /* 5 sütun (100% / 5 = 20%) */
+    max-width: 20%;
+}
+
 /* Responsive düzenlemeler */
 @media (max-width: 768px) {
     .calculator-container {
-        max-width: 100%;
+        max-width: 450px;
         padding: 10px;
-        /* Ekrana daha yakın bir görünüm için padding */
     }
 
     .btn {
-        font-size: 0.9rem;
-        padding: 12px;
-        /* Buton paddingini küçültüyoruz */
+        padding: 15px;
+        width: 100%;
+        height: 60px;
+        font-size: 1rem;
+    }
+
+    .col {
+        flex: 0 0 20%;
+        max-width: 20%;
     }
 
     #display {
         font-size: 1.1rem;
-        /* Ekrana uygun display font boyutu */
     }
 }
 
 @media (max-width: 576px) {
     .calculator-container {
-        max-width: 100%;
-        padding: 8px;
-        /* Küçük ekranlarda padding küçültüldü */
+        max-width: 450px;
+        padding: 10px;
     }
 
     .btn {
-        width: 60px;
+        padding: 2px;
+        width: 100%;
         height: 50px;
-        padding: 10px;
-        font-size: 0.8rem;
-        /* Buton boyutunu daha küçük yapıyoruz */
+        font-size: 16px;
+    }
+
+    .col {
+        flex: 0 0 20%;
+        max-width: 20%;
     }
 
     #display {
         font-size: 1rem;
-        /* Ekrana uygun display font boyutu */
     }
 }
