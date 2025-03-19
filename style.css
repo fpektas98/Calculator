@@ -1,158 +1,120 @@
 /* Genel stil ve UX optimizasyonu */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #212529, #343a40); /* Daha zarif ve nötr bir gradient */
-    min-height: 100vh; /* Tüm ekranı kaplamasını sağlar */
-    margin: 0; /* Varsayılan boşlukları kaldırır */
+    background: linear-gradient(135deg, #212529, #343a40);
+    /* Daha zarif ve nötr bir gradient */
+    min-height: 100vh;
+    /* Tüm ekranı kaplamasını sağlar */
+    margin: 0;
+    /* Varsayılan boşlukları kaldırır */
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 10px;
+    /* Mobilde daha rahat yerleşim için padding */
 }
 
 /* Hesap makinesi kartı */
 .calculator-container {
-    width: 100%; /* Varsayılan genişlik */
-    max-width: 600px; /* Maksimum genişlik */
-    min-width: 300px; /* Minimum genişlik */
+    width: 100%;
+    max-width: 600px;
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Daha derin bir gölge */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    /* Daha derin bir gölge */
     overflow: hidden;
-    background-color: #2d3436; /* Kart arka planı koyu ve sade */
-    padding: 15px; /* İç boşluk */
+    display: flex;
+    flex-direction: row;
+    background-color: #2d3436;
+    /* Kart arka planı koyu ve sade */
 }
 
 /* İçerik düzeni */
 .main-content {
+    transition: margin-left 0.3s ease;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
     width: 100%;
-    padding: 0; /* İç boşluk sıfırlandı, gerekirse artırılabilir */
-}
-
-/* Display tasarımı */
-#display {
-    height: 50px;
-    width: 100%;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-    background-color: #3b4346;
-    color: #e0e6e9;
-    font-family: 'Roboto Mono', monospace;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-    border: none;
-    outline: none; /* Odaklanmada çerçeve çıkmasın */
-}
-
-#display::placeholder {
-    color: #aab2b5;
-    opacity: 0.7;
-    font-style: italic;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-#display.updated {
-    animation: fadeIn 0.3s ease-in;
-}
-
-/* Buton temel stilleri */
-.btn {
     padding: 10px;
-    width: 100%; /* Butonlar sütun genişliğine göre esnesin */
-    height: 50px;
+    /* Hafif iç boşluk */
+}
+
+/* Buton kategorileri */
+.btn {
+    padding: 15px;
+    width: 70px;
+    height: 60px;
     border: none;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 12px;
     transition: background-color 0.2s ease, transform 0.1s ease, filter 0.2s ease;
-    color: #ffffff; /* Varsayılan yazı rengi beyaz */
+    color: #ffffff;
+    /* Varsayılan yazı rengi beyaz */
 }
 
 /* Hover efekti: Yazı rengi korunuyor */
 .btn:hover {
     transform: scale(1.03);
-    filter: brightness(1.15); /* Hafif parlaklık, arka plan değişmeden */
-    color: #ffffff; /* Hover'da yazı rengi değişmez */
+    filter: brightness(1.15);
+    /* Hafif parlaklık, arka plan değişmeden */
+    color: #ffffff;
+    /* Hover'da yazı rengi değişmez */
 }
 
-/* Buton kategorileri */
-.btn-number {
-    background-color: #4b5357; /* Koyu gri, sade ve nötr */
+.btn-outline-secondary {
+    background-color: #3c3c3c;
 }
 
-.btn-operator {
-    background-color: #386641; /* Mor yerine koyu yeşil, doğal ve zarif */
+.btn-outline-secondary:hover {
+    background-color: #202020;
 }
 
-.btn-function {
-    background-color: #3d7068; /* Yeşilimsi gri, sofistike */
+.btn-outline-primary {
+    background-color: #202020;
 }
 
-.btn-action {
-    background-color: #a4161a; /* Pembe-mor yerine koyu kırmızı, klasik ve güçlü */
+.btn-outline-primary:hover {
+    background-color: #466248;
 }
 
-/* Satır ve sütun düzeni */
-.row {
-    margin-bottom: 10px;
-    width: 100%; /* Satır genişliği tam */
-}
-
-.row .col, .row .col-2, .row .col-3 {
-    padding: 0; /* Sütunlarda varsayılan boşluklar kaldırıldı */
-    display: flex;
-    justify-content: center;
-}
-
-/* Responsive Tasarım için Media Queries */
+/* Responsive düzenlemeler */
 @media (max-width: 768px) {
     .calculator-container {
-        width: 90%; /* Ekranın %90'ını kaplar */
-        min-width: 300px; /* Minimum genişlik */
-        max-width: none; /* Maksimum genişlik sınırı kaldırıldı */
-        margin: 10px; /* Ekran kenarlarında boşluk */
+        max-width: 100%;
+        padding: 10px;
+        /* Ekrana daha yakın bir görünüm için padding */
     }
 
     .btn {
-        height: 45px; /* Yükseklik küçültüldü */
-        font-size: 0.9rem; /* Yazı boyutu küçültüldü */
+        font-size: 0.9rem;
+        padding: 12px;
+        /* Buton paddingini küçültüyoruz */
     }
 
     #display {
-        font-size: 1rem; /* Yazı boyutu küçültüldü */
-        padding: 10px; /* İç boşluk azaltıldı */
-        height: 40px; /* Yükseklik küçültüldü */
-    }
-
-    .main-content {
-        gap: 3px; /* Butonlar arası boşluk küçültüldü */
+        font-size: 1.1rem;
+        /* Ekrana uygun display font boyutu */
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
     .calculator-container {
-        width: 95%; /* Ekranın %95'ini kaplar */
-        min-width: 250px; /* Çok küçük ekranlar için minimum genişlik */
-        padding: 10px; /* İç boşluk azaltıldı */
+        max-width: 100%;
+        padding: 8px;
+        /* Küçük ekranlarda padding küçültüldü */
     }
 
     .btn {
-        height: 40px; /* Daha küçük yükseklik */
-        font-size: 0.85rem; /* Daha küçük yazı boyutu */
+        width: 60px;
+        height: 50px;
+        padding: 10px;
+        font-size: 0.8rem;
+        /* Buton boyutunu daha küçük yapıyoruz */
     }
 
     #display {
-        font-size: 0.9rem; /* Daha küçük yazı */
-        height: 35px; /* Daha küçük yükseklik */
-    }
-
-    .main-content {
-        gap: 2px; /* Butonlar arası boşluk daha da küçültüldü */
+        font-size: 1rem;
+        /* Ekrana uygun display font boyutu */
     }
 }
