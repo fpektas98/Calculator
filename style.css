@@ -1,0 +1,110 @@
+/* Genel stil ve UX optimizasyonu */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #212529, #343a40); /* Daha zarif ve nötr bir gradient */
+    min-height: 100vh; /* Tüm ekranı kaplamasını sağlar */
+    margin: 0; /* Varsayılan boşlukları kaldırır */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hesap makinesi kartı */
+.calculator-container {
+    width: 600px;
+    max-width: 600px;
+    min-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Daha derin bir gölge */
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    background-color: #2d3436; /* Kart arka planı koyu ve sade */
+}
+
+/* İçerik düzeni */
+.main-content {
+    transition: margin-left 0.3s ease;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 100%;
+    padding: 10px; /* Hafif iç boşluk */
+}
+
+/* Display tasarımı */
+#display {
+    height: 50px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    background-color: #3b4346;
+    color: #e0e6e9;
+    font-family: 'Roboto Mono', monospace;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: none;
+    outline: none; /* Odaklanmada çerçeve çıkmasın */
+}
+
+#display::placeholder {
+    color: #aab2b5;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#display.updated {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Buton temel stilleri */
+.btn {
+    padding: 15px;
+    width: 70px;
+    height: 60px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.2s ease, transform 0.1s ease, filter 0.2s ease;
+    color: #ffffff; /* Varsayılan yazı rengi beyaz */
+}
+
+/* Hover efekti: Yazı rengi korunuyor */
+.btn:hover {
+    transform: scale(1.03);
+    filter: brightness(1.15); /* Hafif parlaklık, arka plan değişmeden */
+    color: #ffffff; /* Hover'da yazı rengi değişmez */
+}
+
+/* Buton kategorileri */
+.btn-number {
+    background-color: #4b5357; /* Koyu gri, sade ve nötr */
+}
+
+.btn-operator {
+    background-color: #386641; /* Mor yerine koyu yeşil, doğal ve zarif */
+}
+
+.btn-function {
+    background-color: #3d7068; /* Yeşilimsi gri, sofistike */
+}
+
+.btn-action {
+    background-color: #a4161a; /* Pembe-mor yerine koyu kırmızı, klasik ve güçlü */
+}
+
+.row {
+    margin-bottom: 15px;
+}
+
+.row .col {
+    display: flex;
+    justify-content: center;
+}
