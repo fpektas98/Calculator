@@ -27,7 +27,7 @@ Bu projede aşağıdaki teknolojiler kullanılmıştır:
 
 İşte uygulamanın genel görünümü:
 
-![Ekran Görüntüsü]("Calculator.png")
+![Ekran Görüntüsü]("calculator.png")
 
 ## 🛠️ Kurulum
 
