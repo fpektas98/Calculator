@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="tr">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="d-flex justify-content-center align-items-center vh-100">
         <div class="card p-3 shadow calculator-container" id="calculator">
@@ -15,40 +17,50 @@
                 <input type="text" id="display" class="form-control text-end mb-2" disabled>
                 <div class="row g-1">
                     <!-- Bilimsel fonksiyonlar paneli -->
-                    <div class="col "><button class="btn btn-outline-primary border w-100">xʸ</button></div>
-                    <div class="col"><button class="btn btn-outline-primary border w-100">1/x</button></div>
-                    <div class="col"><button class="btn btn-outline-primary border w-100">sin</button></div>
-                    <div class="col"><button class="btn btn-outline-primary border w-100">cos</button></div>
-                    <div class="col"><button class="btn btn-outline-primary border w-100">cot</button></div>
-                    <div class="col"><button class="btn btn-outline-primary border w-100">(</button></div>   
-                    <div class="col"><button class="btn btn-outline-primary border w-100">)</button></div>
-                    <div class="col"><button class="btn btn-outline-primary border w-100">rnd</button></div>
-                    <div class="col-2"><button class="btn btn-outline-danger border w-100">←</button></div>
+                    <div class="col-2 col-lg-1"><button class="btn btn-outline-primary border w-100">(</button></div>
+                    <div class="col-2 col-lg-1"><button class="btn btn-outline-primary border w-100">)</button></div>
+                    <div class="col-2 col-lg-2"><button class="btn btn-outline-primary border w-100">rnd</button></div>
+                    <div class="col-2 col-lg-1"><button class="btn btn-outline-primary border w-100">[</button></div>
+                    <div class="col-2 col-lg-1"><button class="btn btn-outline-primary border w-100">]</button></div>
+                    <div class="col-2 col-lg-6"><button class="btn btn-outline-danger border w-100">←</button></div>
+
+                    <div class="col-3"><button class="btn btn-outline-primary border w-100">sin</button></div>
+                    <div class="col-3"><button class="btn btn-outline-primary border w-100">cos</button></div>
+                    <div class="col-3"><button class="btn btn-outline-primary border w-100">cot</button></div>
+                    <div class="col-3"><button class="btn btn-outline-primary border w-100">π</button></div>
+                    <div class="col-2"><button class="btn btn-outline-primary border w-100">%</button></div>
+                    <div class="col-2"><button class="btn btn-outline-primary border w-100">mod</button></div>
+                    <div class="col-2"><button class="btn btn-outline-primary border w-100">1/x</button></div>
+                    <div class="col-3"><button class="btn btn-outline-primary border w-100">|x|</button></div>
 
                     <!-- Diğer işlemler -->
-                    <div class="col-3"><button class="btn btn-outline-primary border w-100">mod</button></div>
-                    <div class="col-3"><button class="btn btn-outline-primary border w-100">|x|</button></div>
-                    <div class="col-3"><button class="btn btn-outline-primary border w-100">π</button></div>
-                    <div class="col-3"><button class="btn btn-outline-primary border w-100">x!</button></div>
+
                     <div class="col-3"><button class="btn btn-outline-primary border w-100">x²</button></div>
+                    <div class="col-3"><button class="btn btn-outline-primary border w-100">xʸ</button></div>
+                    <div class="col-3"><button class="btn btn-outline-primary border w-100">x!</button></div>
                     <div class="col-3"><button class="btn btn-outline-primary border w-100">√</button></div>
-                    <div class="col-3"><button class="btn btn-outline-primary border w-100">%</button></div>
-                    <div class="col-3"><button class="btn btn-outline-danger border w-100">/</button></div>
+
                     <div class="col-3"><button class="btn btn-outline-secondary border w-100">7</button></div>
                     <div class="col-3"><button class="btn btn-outline-secondary border w-100">8</button></div>
                     <div class="col-3"><button class="btn btn-outline-secondary border w-100">9</button></div>
-                    <div class="col-3"><button class="btn btn-outline-danger border w-100">*</button></div>
+                    <div class="col-3"><button class="btn btn-outline-danger border w-100">/</button></div>
+
                     <div class="col-3"><button class="btn btn-outline-secondary border w-100">4</button></div>
                     <div class="col-3"><button class="btn btn-outline-secondary border w-100">5</button></div>
                     <div class="col-3"><button class="btn btn-outline-secondary border w-100">6</button></div>
-                    <div class="col-3"><button class="btn btn-outline-danger border w-100">-</button></div>
+                    <div class="col-3"><button class="btn btn-outline-danger border w-100">*</button></div>
+
+
                     <div class="col-3"><button class="btn btn-outline-secondary border w-100">1</button></div>
                     <div class="col-3"><button class="btn btn-outline-secondary border w-100">2</button></div>
                     <div class="col-3"><button class="btn btn-outline-secondary border w-100">3</button></div>
-                    <div class="col-3"><button class="btn btn-outline-danger border w-100">+</button></div>
+                    <div class="col-3"><button class="btn btn-outline-danger border w-100">-</button></div>
+
                     <div class="col-3"><button class="btn btn-outline-secondary border w-100">0</button></div>
                     <div class="col-3"><button class="btn btn-outline-primary border w-100">.</button></div>
                     <div class="col-3"><button class="btn btn-outline-danger border w-100">C</button></div>
+
+                    <div class="col-3"><button class="btn btn-outline-danger border w-100">+</button></div>
                     <div class="col-3"><button class="btn btn-outline-success border w-100">=</button></div>
                 </div>
             </div>
@@ -59,4 +71,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="calculate.js"></script>
 </body>
+
 </html>
