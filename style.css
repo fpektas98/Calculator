@@ -11,25 +11,23 @@ body {
 
 /* Hesap makinesi kartı */
 .calculator-container {
-    width: 600px;
-    max-width: 600px;
-    min-width: 400px;
+    width: 100%; /* Varsayılan genişlik */
+    max-width: 600px; /* Maksimum genişlik */
+    min-width: 300px; /* Minimum genişlik */
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Daha derin bir gölge */
     overflow: hidden;
-    display: flex;
-    flex-direction: row;
     background-color: #2d3436; /* Kart arka planı koyu ve sade */
+    padding: 15px; /* İç boşluk */
 }
 
 /* İçerik düzeni */
 .main-content {
-    transition: margin-left 0.3s ease;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
     width: 100%;
-    padding: 10px; /* Hafif iç boşluk */
+    padding: 0; /* İç boşluk sıfırlandı, gerekirse artırılabilir */
 }
 
 /* Display tasarımı */
@@ -65,9 +63,9 @@ body {
 
 /* Buton temel stilleri */
 .btn {
-    padding: 15px;
-    width: 70px;
-    height: 60px;
+    padding: 10px;
+    width: 100%; /* Butonlar sütun genişliğine göre esnesin */
+    height: 50px;
     border: none;
     font-size: 1rem;
     cursor: pointer;
@@ -100,65 +98,55 @@ body {
     background-color: #a4161a; /* Pembe-mor yerine koyu kırmızı, klasik ve güçlü */
 }
 
+/* Satır ve sütun düzeni */
 .row {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    width: 100%; /* Satır genişliği tam */
 }
 
-.row .col {
+.row .col, .row .col-2, .row .col-3 {
+    padding: 0; /* Sütunlarda varsayılan boşluklar kaldırıldı */
     display: flex;
     justify-content: center;
 }
 
 /* Responsive Tasarım için Media Queries */
 @media (max-width: 768px) {
-    /* Hesap makinesi kartı mobil ekranlarda küçülmeli ve tam oturmalı */
     .calculator-container {
         width: 90%; /* Ekranın %90'ını kaplar */
-        min-width: 300px; /* Minimum genişlik küçültülerek mobil dostu hale getirildi */
+        min-width: 300px; /* Minimum genişlik */
         max-width: none; /* Maksimum genişlik sınırı kaldırıldı */
         margin: 10px; /* Ekran kenarlarında boşluk */
     }
 
-    /* Butonlar mobil ekranlarda daha küçük ve düzenli */
     .btn {
-        width: 100%; /* Butonlar sütun genişliğine göre esnesin */
-        height: 50px; /* Yükseklik biraz küçültüldü */
-        padding: 10px; /* İç boşluk azaltıldı */
+        height: 45px; /* Yükseklik küçültüldü */
         font-size: 0.9rem; /* Yazı boyutu küçültüldü */
     }
 
-    /* Display mobil için optimize edildi */
     #display {
         font-size: 1rem; /* Yazı boyutu küçültüldü */
         padding: 10px; /* İç boşluk azaltıldı */
         height: 40px; /* Yükseklik küçültüldü */
     }
 
-    /* Satır ve sütun düzeni mobil için esnek hale getirildi */
     .main-content {
-        padding: 5px; /* İç boşluk azaltıldı */
         gap: 3px; /* Butonlar arası boşluk küçültüldü */
-    }
-
-    .row .col {
-        flex: 1; /* Sütunlar esnek hale getirildi */
-        min-width: 0; /* Taşmayı önlemek için */
     }
 }
 
 @media (max-width: 480px) {
-    /* Daha küçük ekranlar (telefonlar) için ek ayarlar */
     .calculator-container {
         width: 95%; /* Ekranın %95'ini kaplar */
         min-width: 250px; /* Çok küçük ekranlar için minimum genişlik */
+        padding: 10px; /* İç boşluk azaltıldı */
     }
 
     .btn {
-        height: 45px; /* Daha küçük yükseklik */
+        height: 40px; /* Daha küçük yükseklik */
         font-size: 0.85rem; /* Daha küçük yazı boyutu */
     }
 
-    /* Display mobil için optimize edildi */
     #display {
         font-size: 0.9rem; /* Daha küçük yazı */
         height: 35px; /* Daha küçük yükseklik */
