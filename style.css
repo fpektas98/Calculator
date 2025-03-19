@@ -108,3 +108,63 @@ body {
     display: flex;
     justify-content: center;
 }
+
+/* Responsive Tasarım için Media Queries */
+@media (max-width: 768px) {
+    /* Hesap makinesi kartı mobil ekranlarda küçülmeli ve tam oturmalı */
+    .calculator-container {
+        width: 90%; /* Ekranın %90'ını kaplar */
+        min-width: 300px; /* Minimum genişlik küçültülerek mobil dostu hale getirildi */
+        max-width: none; /* Maksimum genişlik sınırı kaldırıldı */
+        margin: 10px; /* Ekran kenarlarında boşluk */
+    }
+
+    /* Butonlar mobil ekranlarda daha küçük ve düzenli */
+    .btn {
+        width: 100%; /* Butonlar sütun genişliğine göre esnesin */
+        height: 50px; /* Yükseklik biraz küçültüldü */
+        padding: 10px; /* İç boşluk azaltıldı */
+        font-size: 0.9rem; /* Yazı boyutu küçültüldü */
+    }
+
+    /* Display mobil için optimize edildi */
+    #display {
+        font-size: 1rem; /* Yazı boyutu küçültüldü */
+        padding: 10px; /* İç boşluk azaltıldı */
+        height: 40px; /* Yükseklik küçültüldü */
+    }
+
+    /* Satır ve sütun düzeni mobil için esnek hale getirildi */
+    .main-content {
+        padding: 5px; /* İç boşluk azaltıldı */
+        gap: 3px; /* Butonlar arası boşluk küçültüldü */
+    }
+
+    .row .col {
+        flex: 1; /* Sütunlar esnek hale getirildi */
+        min-width: 0; /* Taşmayı önlemek için */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Daha küçük ekranlar (telefonlar) için ek ayarlar */
+    .calculator-container {
+        width: 95%; /* Ekranın %95'ini kaplar */
+        min-width: 250px; /* Çok küçük ekranlar için minimum genişlik */
+    }
+
+    .btn {
+        height: 45px; /* Daha küçük yükseklik */
+        font-size: 0.85rem; /* Daha küçük yazı boyutu */
+    }
+
+    /* Display mobil için optimize edildi */
+    #display {
+        font-size: 0.9rem; /* Daha küçük yazı */
+        height: 35px; /* Daha küçük yükseklik */
+    }
+
+    .main-content {
+        gap: 2px; /* Butonlar arası boşluk daha da küçültüldü */
+    }
+}
