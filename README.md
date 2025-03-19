@@ -27,7 +27,7 @@ Bu projede aşağıdaki teknolojiler kullanılmıştır:
 
 İşte uygulamanın genel görünümü:
 
-![Ekran Görüntüsü]("C:\Users\fpekt\OneDrive\Masaüstü\Kodlama\Calculater\calculator.png")
+![Ekran Görüntüsü]("Calculator.png")
 
 ## 🛠️ Kurulum
 
